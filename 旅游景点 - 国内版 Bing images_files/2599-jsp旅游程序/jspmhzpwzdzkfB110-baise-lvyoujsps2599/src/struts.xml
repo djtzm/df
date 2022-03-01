@@ -1,0 +1,2004 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="false">/common/false.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+            <result name="msgqian">/common/msgqian.jsp</result>
+        </global-results>
+
+        <action name="upload" class="com.util.upload" method="upload">
+            <result name="success">/upload/upload_re.jsp</result>
+        </action>
+
+        <action name="index" class="indexAction" method="index">
+            <result name="success">/index.jsp</result>
+        </action>
+
+
+<!--1 chanpin general-->
+        <action name="chanpinAddQian" class="chanpinAction" method="chanpinAddQian">
+            <result name="success">/chanpinManaQian.action</result>
+        </action>
+        <action name="chanpinAdd" class="chanpinAction" method="chanpinAdd">
+            <result name="success">/chanpinMana.action</result>
+        </action>
+        <action name="chanpinSetQian" class="chanpinAction" method="chanpinSet">
+        </action>
+        <action name="chanpinMana" class="chanpinAction" method="chanpinMana">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinChakan" class="chanpinAction" method="chanpinGetByAll">
+            <result name="success">/chanpinChakan.jsp</result>
+        </action>
+        <action name="chanpinSearch" class="chanpinAction" method="chanpinSearch">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinSearchChakan" class="chanpinAction" method="chanpinSearch">
+            <result name="success">/chanpinChakan.jsp</result>
+        </action>
+
+
+
+        <action name="chanpinSearchMy" class="chanpinAction" method="chanpinSearchMy">
+            <result name="success">/chanpinManaMy.jsp</result>
+        </action>
+        <action name="chanpinSearchChakanMy" class="chanpinAction" method="chanpinSearchMy">
+            <result name="success">/chanpinChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="chanpinManaQian" class="chanpinAction" method="chanpinManaQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinManaQianSort" class="chanpinAction" method="chanpinManaQianSort">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinSearchQian" class="chanpinAction" method="chanpinSearchQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinManaMy" class="chanpinAction" method="chanpinManaMy">
+            <result name="success">/chanpinManaMy.jsp</result>
+        </action>
+        <action name="chanpinChakanMy" class="chanpinAction" method="chanpinManaMy">
+            <result name="success">/chanpinChakanMy.jsp</result>
+        </action>
+        <action name="chanpinManaMyQian" class="chanpinAction" method="chanpinManaMyQian">
+            <result name="success">/chanpinManaMyQian.jsp</result>
+        </action>
+        <action name="chanpinDel" class="chanpinAction" method="chanpinDel">
+        </action>
+        <action name="chanpinGet" class="chanpinAction" method="chanpinGet">
+            <result name="success">/chanpinSet.jsp</result>
+        </action>
+        <action name="chanpinDetail" class="chanpinAction" method="chanpinDetail">
+            <result name="success">/chanpinDetail.jsp</result>
+        </action>
+        <action name="chanpinDetailQian" class="chanpinAction" method="chanpinDetailQian">
+            <result name="success">/chanpinDetailQian.jsp</result>
+        </action>
+        <action name="chanpinXinxi" class="chanpinAction" method="chanpinXinxi">
+            <result name="success">/chanpinXinxi.jsp</result>
+        </action>
+        <action name="chanpinSet" class="chanpinAction" method="chanpinSet">
+        </action>
+        <action name="chanpinSet2" class="chanpinAction" method="chanpinSet2">
+        </action>
+<!--2 chanpin searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 chanpin getbycolumn-->
+        <action name="chanpinGetByid" class="chanpinAction" method="chanpinGetByid">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetByidQian" class="chanpinAction" method="chanpinGetByidQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinGetBybiaoti" class="chanpinAction" method="chanpinGetBybiaoti">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetBybiaotiQian" class="chanpinAction" method="chanpinGetBybiaotiQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinGetByneirong" class="chanpinAction" method="chanpinGetByneirong">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetByneirongQian" class="chanpinAction" method="chanpinGetByneirongQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinGetBydizhi" class="chanpinAction" method="chanpinGetBydizhi">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetBydizhiQian" class="chanpinAction" method="chanpinGetBydizhiQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinGetByimage" class="chanpinAction" method="chanpinGetByimage">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetByimageQian" class="chanpinAction" method="chanpinGetByimageQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+        <action name="chanpinGetByshijian" class="chanpinAction" method="chanpinGetByshijian">
+            <result name="success">/chanpinMana.jsp</result>
+        </action>
+        <action name="chanpinGetByshijianQian" class="chanpinAction" method="chanpinGetByshijianQian">
+            <result name="success">/chanpinManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerchanpin getbycolumn-->
+
+<!--4 chanpin setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 dx general-->
+        <action name="dxAddQian" class="dxAction" method="dxAddQian">
+            <result name="success">/dxManaQian.action</result>
+        </action>
+        <action name="dxAdd" class="dxAction" method="dxAdd">
+            <result name="success">/dxMana.action</result>
+        </action>
+        <action name="dxSetQian" class="dxAction" method="dxSet">
+        </action>
+        <action name="dxMana" class="dxAction" method="dxMana">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxChakan" class="dxAction" method="dxGetByAll">
+            <result name="success">/dxChakan.jsp</result>
+        </action>
+        <action name="dxSearch" class="dxAction" method="dxSearch">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxSearchChakan" class="dxAction" method="dxSearch">
+            <result name="success">/dxChakan.jsp</result>
+        </action>
+
+
+
+        <action name="dxSearchMy" class="dxAction" method="dxSearchMy">
+            <result name="success">/dxManaMy.jsp</result>
+        </action>
+        <action name="dxSearchChakanMy" class="dxAction" method="dxSearchMy">
+            <result name="success">/dxChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="dxManaQian" class="dxAction" method="dxManaQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxManaQianSort" class="dxAction" method="dxManaQianSort">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxSearchQian" class="dxAction" method="dxSearchQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxManaMy" class="dxAction" method="dxManaMy">
+            <result name="success">/dxManaMy.jsp</result>
+        </action>
+        <action name="dxChakanMy" class="dxAction" method="dxManaMy">
+            <result name="success">/dxChakanMy.jsp</result>
+        </action>
+        <action name="dxManaMyQian" class="dxAction" method="dxManaMyQian">
+            <result name="success">/dxManaMyQian.jsp</result>
+        </action>
+        <action name="dxDel" class="dxAction" method="dxDel">
+        </action>
+        <action name="dxGet" class="dxAction" method="dxGet">
+            <result name="success">/dxSet.jsp</result>
+        </action>
+        <action name="dxDetail" class="dxAction" method="dxDetail">
+            <result name="success">/dxDetail.jsp</result>
+        </action>
+        <action name="dxDetailQian" class="dxAction" method="dxDetailQian">
+            <result name="success">/dxDetailQian.jsp</result>
+        </action>
+        <action name="dxXinxi" class="dxAction" method="dxXinxi">
+            <result name="success">/dxXinxi.jsp</result>
+        </action>
+        <action name="dxSet" class="dxAction" method="dxSet">
+        </action>
+        <action name="dxSet2" class="dxAction" method="dxSet2">
+        </action>
+<!--2 dx searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 dx getbycolumn-->
+        <action name="dxGetByid" class="dxAction" method="dxGetByid">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxGetByidQian" class="dxAction" method="dxGetByidQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxGetByleibie" class="dxAction" method="dxGetByleibie">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxGetByleibieQian" class="dxAction" method="dxGetByleibieQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxGetBycontent" class="dxAction" method="dxGetBycontent">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxGetBycontentQian" class="dxAction" method="dxGetBycontentQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+        <action name="dxGetByaddtime" class="dxAction" method="dxGetByaddtime">
+            <result name="success">/dxMana.jsp</result>
+        </action>
+        <action name="dxGetByaddtimeQian" class="dxAction" method="dxGetByaddtimeQian">
+            <result name="success">/dxManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerdx getbycolumn-->
+
+<!--4 dx setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 gonggao general-->
+        <action name="gonggaoAddQian" class="gonggaoAction" method="gonggaoAddQian">
+            <result name="success">/gonggaoManaQian.action</result>
+        </action>
+        <action name="gonggaoAdd" class="gonggaoAction" method="gonggaoAdd">
+            <result name="success">/gonggaoMana.action</result>
+        </action>
+        <action name="gonggaoSetQian" class="gonggaoAction" method="gonggaoSet">
+        </action>
+        <action name="gonggaoMana" class="gonggaoAction" method="gonggaoMana">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoChakan" class="gonggaoAction" method="gonggaoGetByAll">
+            <result name="success">/gonggaoChakan.jsp</result>
+        </action>
+        <action name="gonggaoSearch" class="gonggaoAction" method="gonggaoSearch">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoSearchChakan" class="gonggaoAction" method="gonggaoSearch">
+            <result name="success">/gonggaoChakan.jsp</result>
+        </action>
+
+
+
+        <action name="gonggaoSearchMy" class="gonggaoAction" method="gonggaoSearchMy">
+            <result name="success">/gonggaoManaMy.jsp</result>
+        </action>
+        <action name="gonggaoSearchChakanMy" class="gonggaoAction" method="gonggaoSearchMy">
+            <result name="success">/gonggaoChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="gonggaoManaQian" class="gonggaoAction" method="gonggaoManaQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoManaQianSort" class="gonggaoAction" method="gonggaoManaQianSort">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoSearchQian" class="gonggaoAction" method="gonggaoSearchQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoManaMy" class="gonggaoAction" method="gonggaoManaMy">
+            <result name="success">/gonggaoManaMy.jsp</result>
+        </action>
+        <action name="gonggaoChakanMy" class="gonggaoAction" method="gonggaoManaMy">
+            <result name="success">/gonggaoChakanMy.jsp</result>
+        </action>
+        <action name="gonggaoManaMyQian" class="gonggaoAction" method="gonggaoManaMyQian">
+            <result name="success">/gonggaoManaMyQian.jsp</result>
+        </action>
+        <action name="gonggaoDel" class="gonggaoAction" method="gonggaoDel">
+        </action>
+        <action name="gonggaoGet" class="gonggaoAction" method="gonggaoGet">
+            <result name="success">/gonggaoSet.jsp</result>
+        </action>
+        <action name="gonggaoDetail" class="gonggaoAction" method="gonggaoDetail">
+            <result name="success">/gonggaoDetail.jsp</result>
+        </action>
+        <action name="gonggaoDetailQian" class="gonggaoAction" method="gonggaoDetailQian">
+            <result name="success">/gonggaoDetailQian.jsp</result>
+        </action>
+        <action name="gonggaoXinxi" class="gonggaoAction" method="gonggaoXinxi">
+            <result name="success">/gonggaoXinxi.jsp</result>
+        </action>
+        <action name="gonggaoSet" class="gonggaoAction" method="gonggaoSet">
+        </action>
+        <action name="gonggaoSet2" class="gonggaoAction" method="gonggaoSet2">
+        </action>
+<!--2 gonggao searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 gonggao getbycolumn-->
+        <action name="gonggaoGetByid" class="gonggaoAction" method="gonggaoGetByid">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoGetByidQian" class="gonggaoAction" method="gonggaoGetByidQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoGetBybiaoti" class="gonggaoAction" method="gonggaoGetBybiaoti">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoGetBybiaotiQian" class="gonggaoAction" method="gonggaoGetBybiaotiQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoGetByneirong" class="gonggaoAction" method="gonggaoGetByneirong">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoGetByneirongQian" class="gonggaoAction" method="gonggaoGetByneirongQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoGetBytupian" class="gonggaoAction" method="gonggaoGetBytupian">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoGetBytupianQian" class="gonggaoAction" method="gonggaoGetBytupianQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+        <action name="gonggaoGetByshijian" class="gonggaoAction" method="gonggaoGetByshijian">
+            <result name="success">/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoGetByshijianQian" class="gonggaoAction" method="gonggaoGetByshijianQian">
+            <result name="success">/gonggaoManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowergonggao getbycolumn-->
+
+<!--4 gonggao setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 jingdian general-->
+        <action name="jingdianAddQian" class="jingdianAction" method="jingdianAddQian">
+            <result name="success">/jingdianManaQian.action</result>
+        </action>
+        <action name="jingdianAdd" class="jingdianAction" method="jingdianAdd">
+            <result name="success">/jingdianMana.action</result>
+        </action>
+        <action name="jingdianSetQian" class="jingdianAction" method="jingdianSet">
+        </action>
+        <action name="jingdianMana" class="jingdianAction" method="jingdianMana">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianChakan" class="jingdianAction" method="jingdianGetByAll">
+            <result name="success">/jingdianChakan.jsp</result>
+        </action>
+        <action name="jingdianSearch" class="jingdianAction" method="jingdianSearch">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianSearchChakan" class="jingdianAction" method="jingdianSearch">
+            <result name="success">/jingdianChakan.jsp</result>
+        </action>
+
+
+
+        <action name="jingdianSearchMy" class="jingdianAction" method="jingdianSearchMy">
+            <result name="success">/jingdianManaMy.jsp</result>
+        </action>
+        <action name="jingdianSearchChakanMy" class="jingdianAction" method="jingdianSearchMy">
+            <result name="success">/jingdianChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="jingdianManaQian" class="jingdianAction" method="jingdianManaQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianManaQianSort" class="jingdianAction" method="jingdianManaQianSort">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianSearchQian" class="jingdianAction" method="jingdianSearchQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianManaMy" class="jingdianAction" method="jingdianManaMy">
+            <result name="success">/jingdianManaMy.jsp</result>
+        </action>
+        <action name="jingdianChakanMy" class="jingdianAction" method="jingdianManaMy">
+            <result name="success">/jingdianChakanMy.jsp</result>
+        </action>
+        <action name="jingdianManaMyQian" class="jingdianAction" method="jingdianManaMyQian">
+            <result name="success">/jingdianManaMyQian.jsp</result>
+        </action>
+        <action name="jingdianDel" class="jingdianAction" method="jingdianDel">
+        </action>
+        <action name="jingdianGet" class="jingdianAction" method="jingdianGet">
+            <result name="success">/jingdianSet.jsp</result>
+        </action>
+        <action name="jingdianDetail" class="jingdianAction" method="jingdianDetail">
+            <result name="success">/jingdianDetail.jsp</result>
+        </action>
+        <action name="jingdianDetailQian" class="jingdianAction" method="jingdianDetailQian">
+            <result name="success">/jingdianDetailQian.jsp</result>
+        </action>
+        <action name="jingdianXinxi" class="jingdianAction" method="jingdianXinxi">
+            <result name="success">/jingdianXinxi.jsp</result>
+        </action>
+        <action name="jingdianSet" class="jingdianAction" method="jingdianSet">
+        </action>
+        <action name="jingdianSet2" class="jingdianAction" method="jingdianSet2">
+        </action>
+<!--2 jingdian searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 jingdian getbycolumn-->
+        <action name="jingdianGetByid" class="jingdianAction" method="jingdianGetByid">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByidQian" class="jingdianAction" method="jingdianGetByidQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetBybiaoti" class="jingdianAction" method="jingdianGetBybiaoti">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetBybiaotiQian" class="jingdianAction" method="jingdianGetBybiaotiQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetByneirong" class="jingdianAction" method="jingdianGetByneirong">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByneirongQian" class="jingdianAction" method="jingdianGetByneirongQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetByleibieid" class="jingdianAction" method="jingdianGetByleibieid">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByleibieidQian" class="jingdianAction" method="jingdianGetByleibieidQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetByimage" class="jingdianAction" method="jingdianGetByimage">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByimageQian" class="jingdianAction" method="jingdianGetByimageQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetByjiage" class="jingdianAction" method="jingdianGetByjiage">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByjiageQian" class="jingdianAction" method="jingdianGetByjiageQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="jingdianGetByshijian" class="jingdianAction" method="jingdianGetByshijian">
+            <result name="success">/jingdianMana.jsp</result>
+        </action>
+        <action name="jingdianGetByshijianQian" class="jingdianAction" method="jingdianGetByshijianQian">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerjingdian getbycolumn-->
+        <action name="leibiejingdianGetByleibieid" class="jingdianAction" method="jingdianGetByAll">
+<!--
+            <result name="success">/leibiejingdianChakan.jsp</result>
+-->
+            <result name="success">/jingdianChakan.jsp</result>
+
+        </action>
+        <action name="leibiejingdianGetByleibieidQian" class="jingdianAction" method="jingdianGetByAll">
+            <result name="success">/jingdianManaQian.jsp</result>
+        </action>
+        <action name="leibiejingdianAddQian" class="leibieAction" method="leibieGet">
+            <result name="success">/leibiejingdianAddQian.jsp</result>
+        </action>
+        <action name="leibiejingdianAdd" class="leibieAction" method="leibieGet">
+            <result name="success">/leibiejingdianAdd.jsp</result>
+        </action>
+
+<!--4 jingdian setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 jiudian general-->
+        <action name="jiudianAddQian" class="jiudianAction" method="jiudianAddQian">
+            <result name="success">/jiudianManaQian.action</result>
+        </action>
+        <action name="jiudianAdd" class="jiudianAction" method="jiudianAdd">
+            <result name="success">/jiudianMana.action</result>
+        </action>
+        <action name="jiudianSetQian" class="jiudianAction" method="jiudianSet">
+        </action>
+        <action name="jiudianMana" class="jiudianAction" method="jiudianMana">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianChakan" class="jiudianAction" method="jiudianGetByAll">
+            <result name="success">/jiudianChakan.jsp</result>
+        </action>
+        <action name="jiudianSearch" class="jiudianAction" method="jiudianSearch">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianSearchChakan" class="jiudianAction" method="jiudianSearch">
+            <result name="success">/jiudianChakan.jsp</result>
+        </action>
+
+
+
+        <action name="jiudianSearchMy" class="jiudianAction" method="jiudianSearchMy">
+            <result name="success">/jiudianManaMy.jsp</result>
+        </action>
+        <action name="jiudianSearchChakanMy" class="jiudianAction" method="jiudianSearchMy">
+            <result name="success">/jiudianChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="jiudianManaQian" class="jiudianAction" method="jiudianManaQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianManaQianSort" class="jiudianAction" method="jiudianManaQianSort">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianSearchQian" class="jiudianAction" method="jiudianSearchQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianManaMy" class="jiudianAction" method="jiudianManaMy">
+            <result name="success">/jiudianManaMy.jsp</result>
+        </action>
+        <action name="jiudianChakanMy" class="jiudianAction" method="jiudianManaMy">
+            <result name="success">/jiudianChakanMy.jsp</result>
+        </action>
+        <action name="jiudianManaMyQian" class="jiudianAction" method="jiudianManaMyQian">
+            <result name="success">/jiudianManaMyQian.jsp</result>
+        </action>
+        <action name="jiudianDel" class="jiudianAction" method="jiudianDel">
+        </action>
+        <action name="jiudianGet" class="jiudianAction" method="jiudianGet">
+            <result name="success">/jiudianSet.jsp</result>
+        </action>
+        <action name="jiudianDetail" class="jiudianAction" method="jiudianDetail">
+            <result name="success">/jiudianDetail.jsp</result>
+        </action>
+        <action name="jiudianDetailQian" class="jiudianAction" method="jiudianDetailQian">
+            <result name="success">/jiudianDetailQian.jsp</result>
+        </action>
+        <action name="jiudianXinxi" class="jiudianAction" method="jiudianXinxi">
+            <result name="success">/jiudianXinxi.jsp</result>
+        </action>
+        <action name="jiudianSet" class="jiudianAction" method="jiudianSet">
+        </action>
+        <action name="jiudianSet2" class="jiudianAction" method="jiudianSet2">
+        </action>
+<!--2 jiudian searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 jiudian getbycolumn-->
+        <action name="jiudianGetByid" class="jiudianAction" method="jiudianGetByid">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetByidQian" class="jiudianAction" method="jiudianGetByidQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianGetBybiaoti" class="jiudianAction" method="jiudianGetBybiaoti">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetBybiaotiQian" class="jiudianAction" method="jiudianGetBybiaotiQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianGetByneirong" class="jiudianAction" method="jiudianGetByneirong">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetByneirongQian" class="jiudianAction" method="jiudianGetByneirongQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianGetBydizhi" class="jiudianAction" method="jiudianGetBydizhi">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetBydizhiQian" class="jiudianAction" method="jiudianGetBydizhiQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianGetByimage" class="jiudianAction" method="jiudianGetByimage">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetByimageQian" class="jiudianAction" method="jiudianGetByimageQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+        <action name="jiudianGetByshijian" class="jiudianAction" method="jiudianGetByshijian">
+            <result name="success">/jiudianMana.jsp</result>
+        </action>
+        <action name="jiudianGetByshijianQian" class="jiudianAction" method="jiudianGetByshijianQian">
+            <result name="success">/jiudianManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerjiudian getbycolumn-->
+
+<!--4 jiudian setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 leibie general-->
+        <action name="leibieAddQian" class="leibieAction" method="leibieAddQian">
+            <result name="success">/leibieManaQian.action</result>
+        </action>
+        <action name="leibieAdd" class="leibieAction" method="leibieAdd">
+            <result name="success">/leibieMana.action</result>
+        </action>
+        <action name="leibieSetQian" class="leibieAction" method="leibieSet">
+        </action>
+        <action name="leibieMana" class="leibieAction" method="leibieMana">
+            <result name="success">/leibieMana.jsp</result>
+        </action>
+        <action name="leibieChakan" class="leibieAction" method="leibieGetByAll">
+            <result name="success">/leibieChakan.jsp</result>
+        </action>
+        <action name="leibieSearch" class="leibieAction" method="leibieSearch">
+            <result name="success">/leibieMana.jsp</result>
+        </action>
+        <action name="leibieSearchChakan" class="leibieAction" method="leibieSearch">
+            <result name="success">/leibieChakan.jsp</result>
+        </action>
+
+
+
+        <action name="leibieSearchMy" class="leibieAction" method="leibieSearchMy">
+            <result name="success">/leibieManaMy.jsp</result>
+        </action>
+        <action name="leibieSearchChakanMy" class="leibieAction" method="leibieSearchMy">
+            <result name="success">/leibieChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="leibieManaQian" class="leibieAction" method="leibieManaQian">
+            <result name="success">/leibieManaQian.jsp</result>
+        </action>
+        <action name="leibieManaQianSort" class="leibieAction" method="leibieManaQianSort">
+            <result name="success">/leibieManaQian.jsp</result>
+        </action>
+        <action name="leibieSearchQian" class="leibieAction" method="leibieSearchQian">
+            <result name="success">/leibieManaQian.jsp</result>
+        </action>
+        <action name="leibieManaMy" class="leibieAction" method="leibieManaMy">
+            <result name="success">/leibieManaMy.jsp</result>
+        </action>
+        <action name="leibieChakanMy" class="leibieAction" method="leibieManaMy">
+            <result name="success">/leibieChakanMy.jsp</result>
+        </action>
+        <action name="leibieManaMyQian" class="leibieAction" method="leibieManaMyQian">
+            <result name="success">/leibieManaMyQian.jsp</result>
+        </action>
+        <action name="leibieDel" class="leibieAction" method="leibieDel">
+        </action>
+        <action name="leibieGet" class="leibieAction" method="leibieGet">
+            <result name="success">/leibieSet.jsp</result>
+        </action>
+        <action name="leibieDetail" class="leibieAction" method="leibieDetail">
+            <result name="success">/leibieDetail.jsp</result>
+        </action>
+        <action name="leibieDetailQian" class="leibieAction" method="leibieDetailQian">
+            <result name="success">/leibieDetailQian.jsp</result>
+        </action>
+        <action name="leibieXinxi" class="leibieAction" method="leibieXinxi">
+            <result name="success">/leibieXinxi.jsp</result>
+        </action>
+        <action name="leibieSet" class="leibieAction" method="leibieSet">
+        </action>
+        <action name="leibieSet2" class="leibieAction" method="leibieSet2">
+        </action>
+<!--2 leibie searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 leibie getbycolumn-->
+        <action name="leibieGetByid" class="leibieAction" method="leibieGetByid">
+            <result name="success">/leibieMana.jsp</result>
+        </action>
+        <action name="leibieGetByidQian" class="leibieAction" method="leibieGetByidQian">
+            <result name="success">/leibieManaQian.jsp</result>
+        </action>
+        <action name="leibieGetBymingcheng" class="leibieAction" method="leibieGetBymingcheng">
+            <result name="success">/leibieMana.jsp</result>
+        </action>
+        <action name="leibieGetBymingchengQian" class="leibieAction" method="leibieGetBymingchengQian">
+            <result name="success">/leibieManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerleibie getbycolumn-->
+
+<!--4 leibie setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 lianjie general-->
+        <action name="lianjieAddQian" class="lianjieAction" method="lianjieAddQian">
+            <result name="success">/lianjieManaQian.action</result>
+        </action>
+        <action name="lianjieAdd" class="lianjieAction" method="lianjieAdd">
+            <result name="success">/lianjieMana.action</result>
+        </action>
+        <action name="lianjieSetQian" class="lianjieAction" method="lianjieSet">
+        </action>
+        <action name="lianjieMana" class="lianjieAction" method="lianjieMana">
+            <result name="success">/lianjieMana.jsp</result>
+        </action>
+        <action name="lianjieChakan" class="lianjieAction" method="lianjieGetByAll">
+            <result name="success">/lianjieChakan.jsp</result>
+        </action>
+        <action name="lianjieSearch" class="lianjieAction" method="lianjieSearch">
+            <result name="success">/lianjieMana.jsp</result>
+        </action>
+        <action name="lianjieSearchChakan" class="lianjieAction" method="lianjieSearch">
+            <result name="success">/lianjieChakan.jsp</result>
+        </action>
+
+
+
+        <action name="lianjieSearchMy" class="lianjieAction" method="lianjieSearchMy">
+            <result name="success">/lianjieManaMy.jsp</result>
+        </action>
+        <action name="lianjieSearchChakanMy" class="lianjieAction" method="lianjieSearchMy">
+            <result name="success">/lianjieChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="lianjieManaQian" class="lianjieAction" method="lianjieManaQian">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+        <action name="lianjieManaQianSort" class="lianjieAction" method="lianjieManaQianSort">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+        <action name="lianjieSearchQian" class="lianjieAction" method="lianjieSearchQian">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+        <action name="lianjieManaMy" class="lianjieAction" method="lianjieManaMy">
+            <result name="success">/lianjieManaMy.jsp</result>
+        </action>
+        <action name="lianjieChakanMy" class="lianjieAction" method="lianjieManaMy">
+            <result name="success">/lianjieChakanMy.jsp</result>
+        </action>
+        <action name="lianjieManaMyQian" class="lianjieAction" method="lianjieManaMyQian">
+            <result name="success">/lianjieManaMyQian.jsp</result>
+        </action>
+        <action name="lianjieDel" class="lianjieAction" method="lianjieDel">
+        </action>
+        <action name="lianjieGet" class="lianjieAction" method="lianjieGet">
+            <result name="success">/lianjieSet.jsp</result>
+        </action>
+        <action name="lianjieDetail" class="lianjieAction" method="lianjieDetail">
+            <result name="success">/lianjieDetail.jsp</result>
+        </action>
+        <action name="lianjieDetailQian" class="lianjieAction" method="lianjieDetailQian">
+            <result name="success">/lianjieDetailQian.jsp</result>
+        </action>
+        <action name="lianjieXinxi" class="lianjieAction" method="lianjieXinxi">
+            <result name="success">/lianjieXinxi.jsp</result>
+        </action>
+        <action name="lianjieSet" class="lianjieAction" method="lianjieSet">
+        </action>
+        <action name="lianjieSet2" class="lianjieAction" method="lianjieSet2">
+        </action>
+<!--2 lianjie searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 lianjie getbycolumn-->
+        <action name="lianjieGetByid" class="lianjieAction" method="lianjieGetByid">
+            <result name="success">/lianjieMana.jsp</result>
+        </action>
+        <action name="lianjieGetByidQian" class="lianjieAction" method="lianjieGetByidQian">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+        <action name="lianjieGetByname" class="lianjieAction" method="lianjieGetByname">
+            <result name="success">/lianjieMana.jsp</result>
+        </action>
+        <action name="lianjieGetBynameQian" class="lianjieAction" method="lianjieGetBynameQian">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+        <action name="lianjieGetByurl" class="lianjieAction" method="lianjieGetByurl">
+            <result name="success">/lianjieMana.jsp</result>
+        </action>
+        <action name="lianjieGetByurlQian" class="lianjieAction" method="lianjieGetByurlQian">
+            <result name="success">/lianjieManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerlianjie getbycolumn-->
+
+<!--4 lianjie setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 liuyan general-->
+        <action name="liuyanAddQian" class="liuyanAction" method="liuyanAddQian">
+            <result name="success">/liuyanManaQian.action</result>
+        </action>
+        <action name="liuyanAdd" class="liuyanAction" method="liuyanAdd">
+            <result name="success">/liuyanMana.action</result>
+        </action>
+        <action name="liuyanSetQian" class="liuyanAction" method="liuyanSet">
+        </action>
+        <action name="liuyanMana" class="liuyanAction" method="liuyanMana">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanChakan" class="liuyanAction" method="liuyanGetByAll">
+            <result name="success">/liuyanChakan.jsp</result>
+        </action>
+        <action name="liuyanSearch" class="liuyanAction" method="liuyanSearch">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanSearchChakan" class="liuyanAction" method="liuyanSearch">
+            <result name="success">/liuyanChakan.jsp</result>
+        </action>
+
+
+
+        <action name="liuyanSearchMy" class="liuyanAction" method="liuyanSearchMy">
+            <result name="success">/liuyanManaMy.jsp</result>
+        </action>
+        <action name="liuyanSearchChakanMy" class="liuyanAction" method="liuyanSearchMy">
+            <result name="success">/liuyanChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="liuyanManaQian" class="liuyanAction" method="liuyanManaQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanManaQianSort" class="liuyanAction" method="liuyanManaQianSort">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanSearchQian" class="liuyanAction" method="liuyanSearchQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanManaMy" class="liuyanAction" method="liuyanManaMy">
+            <result name="success">/liuyanManaMy.jsp</result>
+        </action>
+        <action name="liuyanChakanMy" class="liuyanAction" method="liuyanManaMy">
+            <result name="success">/liuyanChakanMy.jsp</result>
+        </action>
+        <action name="liuyanManaMyQian" class="liuyanAction" method="liuyanManaMyQian">
+            <result name="success">/liuyanManaMyQian.jsp</result>
+        </action>
+        <action name="liuyanDel" class="liuyanAction" method="liuyanDel">
+        </action>
+        <action name="liuyanGet" class="liuyanAction" method="liuyanGet">
+            <result name="success">/liuyanSet.jsp</result>
+        </action>
+        <action name="liuyanDetail" class="liuyanAction" method="liuyanDetail">
+            <result name="success">/liuyanDetail.jsp</result>
+        </action>
+        <action name="liuyanDetailQian" class="liuyanAction" method="liuyanDetailQian">
+            <result name="success">/liuyanDetailQian.jsp</result>
+        </action>
+        <action name="liuyanXinxi" class="liuyanAction" method="liuyanXinxi">
+            <result name="success">/liuyanXinxi.jsp</result>
+        </action>
+        <action name="liuyanSet" class="liuyanAction" method="liuyanSet">
+        </action>
+        <action name="liuyanSet2" class="liuyanAction" method="liuyanSet2">
+        </action>
+<!--2 liuyan searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 liuyan getbycolumn-->
+        <action name="liuyanGetByid" class="liuyanAction" method="liuyanGetByid">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetByidQian" class="liuyanAction" method="liuyanGetByidQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanGetBybiaoti" class="liuyanAction" method="liuyanGetBybiaoti">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetBybiaotiQian" class="liuyanAction" method="liuyanGetBybiaotiQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanGetByneirong" class="liuyanAction" method="liuyanGetByneirong">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetByneirongQian" class="liuyanAction" method="liuyanGetByneirongQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanGetByliuyanshijian" class="liuyanAction" method="liuyanGetByliuyanshijian">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetByliuyanshijianQian" class="liuyanAction" method="liuyanGetByliuyanshijianQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanGetByusersid" class="liuyanAction" method="liuyanGetByusersid">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetByusersidQian" class="liuyanAction" method="liuyanGetByusersidQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="liuyanGetByhuifu" class="liuyanAction" method="liuyanGetByhuifu">
+            <result name="success">/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanGetByhuifuQian" class="liuyanAction" method="liuyanGetByhuifuQian">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerliuyan getbycolumn-->
+        <action name="usersliuyanGetByusersid" class="liuyanAction" method="liuyanGetByAll">
+<!--
+            <result name="success">/usersliuyanChakan.jsp</result>
+-->
+            <result name="success">/liuyanChakan.jsp</result>
+
+        </action>
+        <action name="usersliuyanGetByusersidQian" class="liuyanAction" method="liuyanGetByAll">
+            <result name="success">/liuyanManaQian.jsp</result>
+        </action>
+        <action name="usersliuyanAddQian" class="usersAction" method="usersGet">
+            <result name="success">/usersliuyanAddQian.jsp</result>
+        </action>
+        <action name="usersliuyanAdd" class="usersAction" method="usersGet">
+            <result name="success">/usersliuyanAdd.jsp</result>
+        </action>
+
+<!--4 liuyan setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 lunbo general-->
+        <action name="lunboAddQian" class="lunboAction" method="lunboAddQian">
+            <result name="success">/lunboManaQian.action</result>
+        </action>
+        <action name="lunboAdd" class="lunboAction" method="lunboAdd">
+            <result name="success">/lunboMana.action</result>
+        </action>
+        <action name="lunboSetQian" class="lunboAction" method="lunboSet">
+        </action>
+        <action name="lunboMana" class="lunboAction" method="lunboMana">
+            <result name="success">/lunboMana.jsp</result>
+        </action>
+        <action name="lunboChakan" class="lunboAction" method="lunboGetByAll">
+            <result name="success">/lunboChakan.jsp</result>
+        </action>
+        <action name="lunboSearch" class="lunboAction" method="lunboSearch">
+            <result name="success">/lunboMana.jsp</result>
+        </action>
+        <action name="lunboSearchChakan" class="lunboAction" method="lunboSearch">
+            <result name="success">/lunboChakan.jsp</result>
+        </action>
+
+
+
+        <action name="lunboSearchMy" class="lunboAction" method="lunboSearchMy">
+            <result name="success">/lunboManaMy.jsp</result>
+        </action>
+        <action name="lunboSearchChakanMy" class="lunboAction" method="lunboSearchMy">
+            <result name="success">/lunboChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="lunboManaQian" class="lunboAction" method="lunboManaQian">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+        <action name="lunboManaQianSort" class="lunboAction" method="lunboManaQianSort">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+        <action name="lunboSearchQian" class="lunboAction" method="lunboSearchQian">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+        <action name="lunboManaMy" class="lunboAction" method="lunboManaMy">
+            <result name="success">/lunboManaMy.jsp</result>
+        </action>
+        <action name="lunboChakanMy" class="lunboAction" method="lunboManaMy">
+            <result name="success">/lunboChakanMy.jsp</result>
+        </action>
+        <action name="lunboManaMyQian" class="lunboAction" method="lunboManaMyQian">
+            <result name="success">/lunboManaMyQian.jsp</result>
+        </action>
+        <action name="lunboDel" class="lunboAction" method="lunboDel">
+        </action>
+        <action name="lunboGet" class="lunboAction" method="lunboGet">
+            <result name="success">/lunboSet.jsp</result>
+        </action>
+        <action name="lunboDetail" class="lunboAction" method="lunboDetail">
+            <result name="success">/lunboDetail.jsp</result>
+        </action>
+        <action name="lunboDetailQian" class="lunboAction" method="lunboDetailQian">
+            <result name="success">/lunboDetailQian.jsp</result>
+        </action>
+        <action name="lunboXinxi" class="lunboAction" method="lunboXinxi">
+            <result name="success">/lunboXinxi.jsp</result>
+        </action>
+        <action name="lunboSet" class="lunboAction" method="lunboSet">
+        </action>
+        <action name="lunboSet2" class="lunboAction" method="lunboSet2">
+        </action>
+<!--2 lunbo searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 lunbo getbycolumn-->
+        <action name="lunboGetByid" class="lunboAction" method="lunboGetByid">
+            <result name="success">/lunboMana.jsp</result>
+        </action>
+        <action name="lunboGetByidQian" class="lunboAction" method="lunboGetByidQian">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+        <action name="lunboGetBybiaoti" class="lunboAction" method="lunboGetBybiaoti">
+            <result name="success">/lunboMana.jsp</result>
+        </action>
+        <action name="lunboGetBybiaotiQian" class="lunboAction" method="lunboGetBybiaotiQian">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+        <action name="lunboGetByimage" class="lunboAction" method="lunboGetByimage">
+            <result name="success">/lunboMana.jsp</result>
+        </action>
+        <action name="lunboGetByimageQian" class="lunboAction" method="lunboGetByimageQian">
+            <result name="success">/lunboManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerlunbo getbycolumn-->
+
+<!--4 lunbo setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 meishi general-->
+        <action name="meishiAddQian" class="meishiAction" method="meishiAddQian">
+            <result name="success">/meishiManaQian.action</result>
+        </action>
+        <action name="meishiAdd" class="meishiAction" method="meishiAdd">
+            <result name="success">/meishiMana.action</result>
+        </action>
+        <action name="meishiSetQian" class="meishiAction" method="meishiSet">
+        </action>
+        <action name="meishiMana" class="meishiAction" method="meishiMana">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiChakan" class="meishiAction" method="meishiGetByAll">
+            <result name="success">/meishiChakan.jsp</result>
+        </action>
+        <action name="meishiSearch" class="meishiAction" method="meishiSearch">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiSearchChakan" class="meishiAction" method="meishiSearch">
+            <result name="success">/meishiChakan.jsp</result>
+        </action>
+
+
+
+        <action name="meishiSearchMy" class="meishiAction" method="meishiSearchMy">
+            <result name="success">/meishiManaMy.jsp</result>
+        </action>
+        <action name="meishiSearchChakanMy" class="meishiAction" method="meishiSearchMy">
+            <result name="success">/meishiChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="meishiManaQian" class="meishiAction" method="meishiManaQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiManaQianSort" class="meishiAction" method="meishiManaQianSort">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiSearchQian" class="meishiAction" method="meishiSearchQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiManaMy" class="meishiAction" method="meishiManaMy">
+            <result name="success">/meishiManaMy.jsp</result>
+        </action>
+        <action name="meishiChakanMy" class="meishiAction" method="meishiManaMy">
+            <result name="success">/meishiChakanMy.jsp</result>
+        </action>
+        <action name="meishiManaMyQian" class="meishiAction" method="meishiManaMyQian">
+            <result name="success">/meishiManaMyQian.jsp</result>
+        </action>
+        <action name="meishiDel" class="meishiAction" method="meishiDel">
+        </action>
+        <action name="meishiGet" class="meishiAction" method="meishiGet">
+            <result name="success">/meishiSet.jsp</result>
+        </action>
+        <action name="meishiDetail" class="meishiAction" method="meishiDetail">
+            <result name="success">/meishiDetail.jsp</result>
+        </action>
+        <action name="meishiDetailQian" class="meishiAction" method="meishiDetailQian">
+            <result name="success">/meishiDetailQian.jsp</result>
+        </action>
+        <action name="meishiXinxi" class="meishiAction" method="meishiXinxi">
+            <result name="success">/meishiXinxi.jsp</result>
+        </action>
+        <action name="meishiSet" class="meishiAction" method="meishiSet">
+        </action>
+        <action name="meishiSet2" class="meishiAction" method="meishiSet2">
+        </action>
+<!--2 meishi searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 meishi getbycolumn-->
+        <action name="meishiGetByid" class="meishiAction" method="meishiGetByid">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetByidQian" class="meishiAction" method="meishiGetByidQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiGetBybiaoti" class="meishiAction" method="meishiGetBybiaoti">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetBybiaotiQian" class="meishiAction" method="meishiGetBybiaotiQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiGetByneirong" class="meishiAction" method="meishiGetByneirong">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetByneirongQian" class="meishiAction" method="meishiGetByneirongQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiGetBydizhi" class="meishiAction" method="meishiGetBydizhi">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetBydizhiQian" class="meishiAction" method="meishiGetBydizhiQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiGetByimage" class="meishiAction" method="meishiGetByimage">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetByimageQian" class="meishiAction" method="meishiGetByimageQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+        <action name="meishiGetByshijian" class="meishiAction" method="meishiGetByshijian">
+            <result name="success">/meishiMana.jsp</result>
+        </action>
+        <action name="meishiGetByshijianQian" class="meishiAction" method="meishiGetByshijianQian">
+            <result name="success">/meishiManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowermeishi getbycolumn-->
+
+<!--4 meishi setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 pinglun general-->
+        <action name="pinglunAddQian" class="pinglunAction" method="pinglunAddQian">
+            <result name="success">/pinglunManaQian.action</result>
+        </action>
+        <action name="pinglunAdd" class="pinglunAction" method="pinglunAdd">
+            <result name="success">/pinglunMana.action</result>
+        </action>
+        <action name="pinglunSetQian" class="pinglunAction" method="pinglunSet">
+        </action>
+        <action name="pinglunMana" class="pinglunAction" method="pinglunMana">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunChakan" class="pinglunAction" method="pinglunGetByAll">
+            <result name="success">/pinglunChakan.jsp</result>
+        </action>
+        <action name="pinglunSearch" class="pinglunAction" method="pinglunSearch">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunSearchChakan" class="pinglunAction" method="pinglunSearch">
+            <result name="success">/pinglunChakan.jsp</result>
+        </action>
+
+
+
+        <action name="pinglunSearchMy" class="pinglunAction" method="pinglunSearchMy">
+            <result name="success">/pinglunManaMy.jsp</result>
+        </action>
+        <action name="pinglunSearchChakanMy" class="pinglunAction" method="pinglunSearchMy">
+            <result name="success">/pinglunChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="pinglunManaQian" class="pinglunAction" method="pinglunManaQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunManaQianSort" class="pinglunAction" method="pinglunManaQianSort">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunSearchQian" class="pinglunAction" method="pinglunSearchQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunManaMy" class="pinglunAction" method="pinglunManaMy">
+            <result name="success">/pinglunManaMy.jsp</result>
+        </action>
+        <action name="pinglunChakanMy" class="pinglunAction" method="pinglunManaMy">
+            <result name="success">/pinglunChakanMy.jsp</result>
+        </action>
+        <action name="pinglunManaMyQian" class="pinglunAction" method="pinglunManaMyQian">
+            <result name="success">/pinglunManaMyQian.jsp</result>
+        </action>
+        <action name="pinglunDel" class="pinglunAction" method="pinglunDel">
+        </action>
+        <action name="pinglunGet" class="pinglunAction" method="pinglunGet">
+            <result name="success">/pinglunSet.jsp</result>
+        </action>
+        <action name="pinglunDetail" class="pinglunAction" method="pinglunDetail">
+            <result name="success">/pinglunDetail.jsp</result>
+        </action>
+        <action name="pinglunDetailQian" class="pinglunAction" method="pinglunDetailQian">
+            <result name="success">/pinglunDetailQian.jsp</result>
+        </action>
+        <action name="pinglunXinxi" class="pinglunAction" method="pinglunXinxi">
+            <result name="success">/pinglunXinxi.jsp</result>
+        </action>
+        <action name="pinglunSet" class="pinglunAction" method="pinglunSet">
+        </action>
+        <action name="pinglunSet2" class="pinglunAction" method="pinglunSet2">
+        </action>
+<!--2 pinglun searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 pinglun getbycolumn-->
+        <action name="pinglunGetByid" class="pinglunAction" method="pinglunGetByid">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetByidQian" class="pinglunAction" method="pinglunGetByidQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunGetBybiaoti" class="pinglunAction" method="pinglunGetBybiaoti">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetBybiaotiQian" class="pinglunAction" method="pinglunGetBybiaotiQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunGetByneirong" class="pinglunAction" method="pinglunGetByneirong">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetByneirongQian" class="pinglunAction" method="pinglunGetByneirongQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunGetByshijian" class="pinglunAction" method="pinglunGetByshijian">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetByshijianQian" class="pinglunAction" method="pinglunGetByshijianQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunGetByjingdianid" class="pinglunAction" method="pinglunGetByjingdianid">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetByjingdianidQian" class="pinglunAction" method="pinglunGetByjingdianidQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="pinglunGetByusersid" class="pinglunAction" method="pinglunGetByusersid">
+            <result name="success">/pinglunMana.jsp</result>
+        </action>
+        <action name="pinglunGetByusersidQian" class="pinglunAction" method="pinglunGetByusersidQian">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerpinglun getbycolumn-->
+        <action name="jingdianpinglunGetByjingdianid" class="pinglunAction" method="pinglunGetByAll">
+<!--
+            <result name="success">/jingdianpinglunChakan.jsp</result>
+-->
+            <result name="success">/pinglunChakan.jsp</result>
+
+        </action>
+        <action name="jingdianpinglunGetByjingdianidQian" class="pinglunAction" method="pinglunGetByAll">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="jingdianpinglunAddQian" class="jingdianAction" method="jingdianGet">
+            <result name="success">/jingdianpinglunAddQian.jsp</result>
+        </action>
+        <action name="jingdianpinglunAdd" class="jingdianAction" method="jingdianGet">
+            <result name="success">/jingdianpinglunAdd.jsp</result>
+        </action>
+        <action name="userspinglunGetByusersid" class="pinglunAction" method="pinglunGetByAll">
+<!--
+            <result name="success">/userspinglunChakan.jsp</result>
+-->
+            <result name="success">/pinglunChakan.jsp</result>
+
+        </action>
+        <action name="userspinglunGetByusersidQian" class="pinglunAction" method="pinglunGetByAll">
+            <result name="success">/pinglunManaQian.jsp</result>
+        </action>
+        <action name="userspinglunAddQian" class="usersAction" method="usersGet">
+            <result name="success">/userspinglunAddQian.jsp</result>
+        </action>
+        <action name="userspinglunAdd" class="usersAction" method="usersGet">
+            <result name="success">/userspinglunAdd.jsp</result>
+        </action>
+
+<!--4 pinglun setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 shoucang general-->
+        <action name="shoucangAddQian" class="shoucangAction" method="shoucangAddQian">
+            <result name="success">/shoucangManaQian.action</result>
+        </action>
+        <action name="shoucangAdd" class="shoucangAction" method="shoucangAdd">
+            <result name="success">/shoucangMana.action</result>
+        </action>
+        <action name="shoucangSetQian" class="shoucangAction" method="shoucangSet">
+        </action>
+        <action name="shoucangMana" class="shoucangAction" method="shoucangMana">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangChakan" class="shoucangAction" method="shoucangGetByAll">
+            <result name="success">/shoucangChakan.jsp</result>
+        </action>
+        <action name="shoucangSearch" class="shoucangAction" method="shoucangSearch">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangSearchChakan" class="shoucangAction" method="shoucangSearch">
+            <result name="success">/shoucangChakan.jsp</result>
+        </action>
+
+
+
+        <action name="shoucangSearchMy" class="shoucangAction" method="shoucangSearchMy">
+            <result name="success">/shoucangManaMy.jsp</result>
+        </action>
+        <action name="shoucangSearchChakanMy" class="shoucangAction" method="shoucangSearchMy">
+            <result name="success">/shoucangChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="shoucangManaQian" class="shoucangAction" method="shoucangManaQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangManaQianSort" class="shoucangAction" method="shoucangManaQianSort">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangSearchQian" class="shoucangAction" method="shoucangSearchQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangManaMy" class="shoucangAction" method="shoucangManaMy">
+            <result name="success">/shoucangManaMy.jsp</result>
+        </action>
+        <action name="shoucangChakanMy" class="shoucangAction" method="shoucangManaMy">
+            <result name="success">/shoucangChakanMy.jsp</result>
+        </action>
+        <action name="shoucangManaMyQian" class="shoucangAction" method="shoucangManaMyQian">
+            <result name="success">/shoucangManaMyQian.jsp</result>
+        </action>
+        <action name="shoucangDel" class="shoucangAction" method="shoucangDel">
+        </action>
+        <action name="shoucangGet" class="shoucangAction" method="shoucangGet">
+            <result name="success">/shoucangSet.jsp</result>
+        </action>
+        <action name="shoucangDetail" class="shoucangAction" method="shoucangDetail">
+            <result name="success">/shoucangDetail.jsp</result>
+        </action>
+        <action name="shoucangDetailQian" class="shoucangAction" method="shoucangDetailQian">
+            <result name="success">/shoucangDetailQian.jsp</result>
+        </action>
+        <action name="shoucangXinxi" class="shoucangAction" method="shoucangXinxi">
+            <result name="success">/shoucangXinxi.jsp</result>
+        </action>
+        <action name="shoucangSet" class="shoucangAction" method="shoucangSet">
+        </action>
+        <action name="shoucangSet2" class="shoucangAction" method="shoucangSet2">
+        </action>
+<!--2 shoucang searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 shoucang getbycolumn-->
+        <action name="shoucangGetByid" class="shoucangAction" method="shoucangGetByid">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangGetByidQian" class="shoucangAction" method="shoucangGetByidQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangGetByshijian" class="shoucangAction" method="shoucangGetByshijian">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangGetByshijianQian" class="shoucangAction" method="shoucangGetByshijianQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangGetByjingdianid" class="shoucangAction" method="shoucangGetByjingdianid">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangGetByjingdianidQian" class="shoucangAction" method="shoucangGetByjingdianidQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="shoucangGetByusersid" class="shoucangAction" method="shoucangGetByusersid">
+            <result name="success">/shoucangMana.jsp</result>
+        </action>
+        <action name="shoucangGetByusersidQian" class="shoucangAction" method="shoucangGetByusersidQian">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowershoucang getbycolumn-->
+        <action name="jingdianshoucangGetByjingdianid" class="shoucangAction" method="shoucangGetByAll">
+<!--
+            <result name="success">/jingdianshoucangChakan.jsp</result>
+-->
+            <result name="success">/shoucangChakan.jsp</result>
+
+        </action>
+        <action name="jingdianshoucangGetByjingdianidQian" class="shoucangAction" method="shoucangGetByAll">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="jingdianshoucangAddQian" class="jingdianAction" method="jingdianGet">
+            <result name="success">/jingdianshoucangAddQian.jsp</result>
+        </action>
+        <action name="jingdianshoucangAdd" class="jingdianAction" method="jingdianGet">
+            <result name="success">/jingdianshoucangAdd.jsp</result>
+        </action>
+        <action name="usersshoucangGetByusersid" class="shoucangAction" method="shoucangGetByAll">
+<!--
+            <result name="success">/usersshoucangChakan.jsp</result>
+-->
+            <result name="success">/shoucangChakan.jsp</result>
+
+        </action>
+        <action name="usersshoucangGetByusersidQian" class="shoucangAction" method="shoucangGetByAll">
+            <result name="success">/shoucangManaQian.jsp</result>
+        </action>
+        <action name="usersshoucangAddQian" class="usersAction" method="usersGet">
+            <result name="success">/usersshoucangAddQian.jsp</result>
+        </action>
+        <action name="usersshoucangAdd" class="usersAction" method="usersGet">
+            <result name="success">/usersshoucangAdd.jsp</result>
+        </action>
+
+<!--4 shoucang setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 users general-->
+        <action name="usersAddQian" class="usersAction" method="usersAddQian">
+            <result name="success">/usersManaQian.action</result>
+        </action>
+        <action name="usersAdd" class="usersAction" method="usersAdd">
+            <result name="success">/usersMana.action</result>
+        </action>
+        <action name="usersSetQian" class="usersAction" method="usersSet">
+        </action>
+        <action name="usersMana" class="usersAction" method="usersMana">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersChakan" class="usersAction" method="usersGetByAll">
+            <result name="success">/usersChakan.jsp</result>
+        </action>
+        <action name="usersSearch" class="usersAction" method="usersSearch">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersSearchChakan" class="usersAction" method="usersSearch">
+            <result name="success">/usersChakan.jsp</result>
+        </action>
+
+
+
+        <action name="usersSearchMy" class="usersAction" method="usersSearchMy">
+            <result name="success">/usersManaMy.jsp</result>
+        </action>
+        <action name="usersSearchChakanMy" class="usersAction" method="usersSearchMy">
+            <result name="success">/usersChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="usersManaQian" class="usersAction" method="usersManaQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersManaQianSort" class="usersAction" method="usersManaQianSort">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersSearchQian" class="usersAction" method="usersSearchQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersManaMy" class="usersAction" method="usersManaMy">
+            <result name="success">/usersManaMy.jsp</result>
+        </action>
+        <action name="usersChakanMy" class="usersAction" method="usersManaMy">
+            <result name="success">/usersChakanMy.jsp</result>
+        </action>
+        <action name="usersManaMyQian" class="usersAction" method="usersManaMyQian">
+            <result name="success">/usersManaMyQian.jsp</result>
+        </action>
+        <action name="usersDel" class="usersAction" method="usersDel">
+        </action>
+        <action name="usersGet" class="usersAction" method="usersGet">
+            <result name="success">/usersSet.jsp</result>
+        </action>
+        <action name="usersDetail" class="usersAction" method="usersDetail">
+            <result name="success">/usersDetail.jsp</result>
+        </action>
+        <action name="usersDetailQian" class="usersAction" method="usersDetailQian">
+            <result name="success">/usersDetailQian.jsp</result>
+        </action>
+        <action name="usersXinxi" class="usersAction" method="usersXinxi">
+            <result name="success">/usersXinxi.jsp</result>
+        </action>
+        <action name="usersSet" class="usersAction" method="usersSet">
+        </action>
+        <action name="usersSet2" class="usersAction" method="usersSet2">
+        </action>
+<!--2 users searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 users getbycolumn-->
+        <action name="usersGetByid" class="usersAction" method="usersGetByid">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByidQian" class="usersAction" method="usersGetByidQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByloginname" class="usersAction" method="usersGetByloginname">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByloginnameQian" class="usersAction" method="usersGetByloginnameQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByloginpw" class="usersAction" method="usersGetByloginpw">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByloginpwQian" class="usersAction" method="usersGetByloginpwQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByxingming" class="usersAction" method="usersGetByxingming">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByxingmingQian" class="usersAction" method="usersGetByxingmingQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByxingbie" class="usersAction" method="usersGetByxingbie">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByxingbieQian" class="usersAction" method="usersGetByxingbieQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetBynianling" class="usersAction" method="usersGetBynianling">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetBynianlingQian" class="usersAction" method="usersGetBynianlingQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByaddress" class="usersAction" method="usersGetByaddress">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByaddressQian" class="usersAction" method="usersGetByaddressQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetBydianhua" class="usersAction" method="usersGetBydianhua">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetBydianhuaQian" class="usersAction" method="usersGetBydianhuaQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetByshenhe" class="usersAction" method="usersGetByshenhe">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetByshenheQian" class="usersAction" method="usersGetByshenheQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetBytype" class="usersAction" method="usersGetBytype">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetBytypeQian" class="usersAction" method="usersGetBytypeQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+        <action name="usersGetBytypename" class="usersAction" method="usersGetBytypename">
+            <result name="success">/usersMana.jsp</result>
+        </action>
+        <action name="usersGetBytypenameQian" class="usersAction" method="usersGetBytypenameQian">
+            <result name="success">/usersManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerusers getbycolumn-->
+
+<!--4 users setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 xianlu general-->
+        <action name="xianluAddQian" class="xianluAction" method="xianluAddQian">
+            <result name="success">/xianluManaQian.action</result>
+        </action>
+        <action name="xianluAdd" class="xianluAction" method="xianluAdd">
+            <result name="success">/xianluMana.action</result>
+        </action>
+        <action name="xianluSetQian" class="xianluAction" method="xianluSet">
+        </action>
+        <action name="xianluMana" class="xianluAction" method="xianluMana">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluChakan" class="xianluAction" method="xianluGetByAll">
+            <result name="success">/xianluChakan.jsp</result>
+        </action>
+        <action name="xianluSearch" class="xianluAction" method="xianluSearch">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluSearchChakan" class="xianluAction" method="xianluSearch">
+            <result name="success">/xianluChakan.jsp</result>
+        </action>
+
+
+
+        <action name="xianluSearchMy" class="xianluAction" method="xianluSearchMy">
+            <result name="success">/xianluManaMy.jsp</result>
+        </action>
+        <action name="xianluSearchChakanMy" class="xianluAction" method="xianluSearchMy">
+            <result name="success">/xianluChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="xianluManaQian" class="xianluAction" method="xianluManaQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluManaQianSort" class="xianluAction" method="xianluManaQianSort">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluSearchQian" class="xianluAction" method="xianluSearchQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluManaMy" class="xianluAction" method="xianluManaMy">
+            <result name="success">/xianluManaMy.jsp</result>
+        </action>
+        <action name="xianluChakanMy" class="xianluAction" method="xianluManaMy">
+            <result name="success">/xianluChakanMy.jsp</result>
+        </action>
+        <action name="xianluManaMyQian" class="xianluAction" method="xianluManaMyQian">
+            <result name="success">/xianluManaMyQian.jsp</result>
+        </action>
+        <action name="xianluDel" class="xianluAction" method="xianluDel">
+        </action>
+        <action name="xianluGet" class="xianluAction" method="xianluGet">
+            <result name="success">/xianluSet.jsp</result>
+        </action>
+        <action name="xianluDetail" class="xianluAction" method="xianluDetail">
+            <result name="success">/xianluDetail.jsp</result>
+        </action>
+        <action name="xianluDetailQian" class="xianluAction" method="xianluDetailQian">
+            <result name="success">/xianluDetailQian.jsp</result>
+        </action>
+        <action name="xianluXinxi" class="xianluAction" method="xianluXinxi">
+            <result name="success">/xianluXinxi.jsp</result>
+        </action>
+        <action name="xianluSet" class="xianluAction" method="xianluSet">
+        </action>
+        <action name="xianluSet2" class="xianluAction" method="xianluSet2">
+        </action>
+<!--2 xianlu searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 xianlu getbycolumn-->
+        <action name="xianluGetByid" class="xianluAction" method="xianluGetByid">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByidQian" class="xianluAction" method="xianluGetByidQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetBybiaoti" class="xianluAction" method="xianluGetBybiaoti">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetBybiaotiQian" class="xianluAction" method="xianluGetBybiaotiQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetByneirong" class="xianluAction" method="xianluGetByneirong">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByneirongQian" class="xianluAction" method="xianluGetByneirongQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetByleibieid" class="xianluAction" method="xianluGetByleibieid">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByleibieidQian" class="xianluAction" method="xianluGetByleibieidQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetByimage" class="xianluAction" method="xianluGetByimage">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByimageQian" class="xianluAction" method="xianluGetByimageQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetByshijian" class="xianluAction" method="xianluGetByshijian">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByshijianQian" class="xianluAction" method="xianluGetByshijianQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="xianluGetByusersid" class="xianluAction" method="xianluGetByusersid">
+            <result name="success">/xianluMana.jsp</result>
+        </action>
+        <action name="xianluGetByusersidQian" class="xianluAction" method="xianluGetByusersidQian">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLowerxianlu getbycolumn-->
+        <action name="leibiexianluGetByleibieid" class="xianluAction" method="xianluGetByAll">
+<!--
+            <result name="success">/leibiexianluChakan.jsp</result>
+-->
+            <result name="success">/xianluChakan.jsp</result>
+
+        </action>
+        <action name="leibiexianluGetByleibieidQian" class="xianluAction" method="xianluGetByAll">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="leibiexianluAddQian" class="leibieAction" method="leibieGet">
+            <result name="success">/leibiexianluAddQian.jsp</result>
+        </action>
+        <action name="leibiexianluAdd" class="leibieAction" method="leibieGet">
+            <result name="success">/leibiexianluAdd.jsp</result>
+        </action>
+        <action name="usersxianluGetByusersid" class="xianluAction" method="xianluGetByAll">
+<!--
+            <result name="success">/usersxianluChakan.jsp</result>
+-->
+            <result name="success">/xianluChakan.jsp</result>
+
+        </action>
+        <action name="usersxianluGetByusersidQian" class="xianluAction" method="xianluGetByAll">
+            <result name="success">/xianluManaQian.jsp</result>
+        </action>
+        <action name="usersxianluAddQian" class="usersAction" method="usersGet">
+            <result name="success">/usersxianluAddQian.jsp</result>
+        </action>
+        <action name="usersxianluAdd" class="usersAction" method="usersGet">
+            <result name="success">/usersxianluAdd.jsp</result>
+        </action>
+
+<!--4 xianlu setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 yuding general-->
+        <action name="yudingAddQian" class="yudingAction" method="yudingAddQian">
+            <result name="success">/yudingManaQian.action</result>
+        </action>
+        <action name="yudingAdd" class="yudingAction" method="yudingAdd">
+            <result name="success">/yudingMana.action</result>
+        </action>
+        <action name="yudingSetQian" class="yudingAction" method="yudingSet">
+        </action>
+        <action name="yudingMana" class="yudingAction" method="yudingMana">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingChakan" class="yudingAction" method="yudingGetByAll">
+            <result name="success">/yudingChakan.jsp</result>
+        </action>
+        <action name="yudingSearch" class="yudingAction" method="yudingSearch">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingSearchChakan" class="yudingAction" method="yudingSearch">
+            <result name="success">/yudingChakan.jsp</result>
+        </action>
+
+
+
+        <action name="yudingSearchMy" class="yudingAction" method="yudingSearchMy">
+            <result name="success">/yudingManaMy.jsp</result>
+        </action>
+        <action name="yudingSearchChakanMy" class="yudingAction" method="yudingSearchMy">
+            <result name="success">/yudingChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="yudingManaQian" class="yudingAction" method="yudingManaQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingManaQianSort" class="yudingAction" method="yudingManaQianSort">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingSearchQian" class="yudingAction" method="yudingSearchQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingManaMy" class="yudingAction" method="yudingManaMy">
+            <result name="success">/yudingManaMy.jsp</result>
+        </action>
+        <action name="yudingChakanMy" class="yudingAction" method="yudingManaMy">
+            <result name="success">/yudingChakanMy.jsp</result>
+        </action>
+        <action name="yudingManaMyQian" class="yudingAction" method="yudingManaMyQian">
+            <result name="success">/yudingManaMyQian.jsp</result>
+        </action>
+        <action name="yudingDel" class="yudingAction" method="yudingDel">
+        </action>
+        <action name="yudingGet" class="yudingAction" method="yudingGet">
+            <result name="success">/yudingSet.jsp</result>
+        </action>
+        <action name="yudingDetail" class="yudingAction" method="yudingDetail">
+            <result name="success">/yudingDetail.jsp</result>
+        </action>
+        <action name="yudingDetailQian" class="yudingAction" method="yudingDetailQian">
+            <result name="success">/yudingDetailQian.jsp</result>
+        </action>
+        <action name="yudingXinxi" class="yudingAction" method="yudingXinxi">
+            <result name="success">/yudingXinxi.jsp</result>
+        </action>
+        <action name="yudingSet" class="yudingAction" method="yudingSet">
+        </action>
+        <action name="yudingSet2" class="yudingAction" method="yudingSet2">
+        </action>
+<!--2 yuding searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 yuding getbycolumn-->
+        <action name="yudingGetByid" class="yudingAction" method="yudingGetByid">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetByidQian" class="yudingAction" method="yudingGetByidQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetBybiaoti" class="yudingAction" method="yudingGetBybiaoti">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetBybiaotiQian" class="yudingAction" method="yudingGetBybiaotiQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetByjiudianid" class="yudingAction" method="yudingGetByjiudianid">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetByjiudianidQian" class="yudingAction" method="yudingGetByjiudianidQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetByusersid" class="yudingAction" method="yudingGetByusersid">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetByusersidQian" class="yudingAction" method="yudingGetByusersidQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetByriqi" class="yudingAction" method="yudingGetByriqi">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetByriqiQian" class="yudingAction" method="yudingGetByriqiQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetByxingming" class="yudingAction" method="yudingGetByxingming">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetByxingmingQian" class="yudingAction" method="yudingGetByxingmingQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetBydianhua" class="yudingAction" method="yudingGetBydianhua">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetBydianhuaQian" class="yudingAction" method="yudingGetBydianhuaQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="yudingGetBybeizhu" class="yudingAction" method="yudingGetBybeizhu">
+            <result name="success">/yudingMana.jsp</result>
+        </action>
+        <action name="yudingGetBybeizhuQian" class="yudingAction" method="yudingGetBybeizhuQian">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLoweryuding getbycolumn-->
+        <action name="jiudianyudingGetByjiudianid" class="yudingAction" method="yudingGetByAll">
+<!--
+            <result name="success">/jiudianyudingChakan.jsp</result>
+-->
+            <result name="success">/yudingChakan.jsp</result>
+
+        </action>
+        <action name="jiudianyudingGetByjiudianidQian" class="yudingAction" method="yudingGetByAll">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="jiudianyudingAddQian" class="jiudianAction" method="jiudianGet">
+            <result name="success">/jiudianyudingAddQian.jsp</result>
+        </action>
+        <action name="jiudianyudingAdd" class="jiudianAction" method="jiudianGet">
+            <result name="success">/jiudianyudingAdd.jsp</result>
+        </action>
+        <action name="usersyudingGetByusersid" class="yudingAction" method="yudingGetByAll">
+<!--
+            <result name="success">/usersyudingChakan.jsp</result>
+-->
+            <result name="success">/yudingChakan.jsp</result>
+
+        </action>
+        <action name="usersyudingGetByusersidQian" class="yudingAction" method="yudingGetByAll">
+            <result name="success">/yudingManaQian.jsp</result>
+        </action>
+        <action name="usersyudingAddQian" class="usersAction" method="usersGet">
+            <result name="success">/usersyudingAddQian.jsp</result>
+        </action>
+        <action name="usersyudingAdd" class="usersAction" method="usersGet">
+            <result name="success">/usersyudingAdd.jsp</result>
+        </action>
+
+<!--4 yuding setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+<!--1 yuyue general-->
+        <action name="yuyueAddQian" class="yuyueAction" method="yuyueAddQian">
+            <result name="success">/yuyueManaQian.action</result>
+        </action>
+        <action name="yuyueAdd" class="yuyueAction" method="yuyueAdd">
+            <result name="success">/yuyueMana.action</result>
+        </action>
+        <action name="yuyueSetQian" class="yuyueAction" method="yuyueSet">
+        </action>
+        <action name="yuyueMana" class="yuyueAction" method="yuyueMana">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueChakan" class="yuyueAction" method="yuyueGetByAll">
+            <result name="success">/yuyueChakan.jsp</result>
+        </action>
+        <action name="yuyueSearch" class="yuyueAction" method="yuyueSearch">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueSearchChakan" class="yuyueAction" method="yuyueSearch">
+            <result name="success">/yuyueChakan.jsp</result>
+        </action>
+
+
+
+        <action name="yuyueSearchMy" class="yuyueAction" method="yuyueSearchMy">
+            <result name="success">/yuyueManaMy.jsp</result>
+        </action>
+        <action name="yuyueSearchChakanMy" class="yuyueAction" method="yuyueSearchMy">
+            <result name="success">/yuyueChakanMy.jsp</result>
+        </action>
+
+
+
+        <action name="yuyueManaQian" class="yuyueAction" method="yuyueManaQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueManaQianSort" class="yuyueAction" method="yuyueManaQianSort">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueSearchQian" class="yuyueAction" method="yuyueSearchQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueManaMy" class="yuyueAction" method="yuyueManaMy">
+            <result name="success">/yuyueManaMy.jsp</result>
+        </action>
+        <action name="yuyueChakanMy" class="yuyueAction" method="yuyueManaMy">
+            <result name="success">/yuyueChakanMy.jsp</result>
+        </action>
+        <action name="yuyueManaMyQian" class="yuyueAction" method="yuyueManaMyQian">
+            <result name="success">/yuyueManaMyQian.jsp</result>
+        </action>
+        <action name="yuyueDel" class="yuyueAction" method="yuyueDel">
+        </action>
+        <action name="yuyueGet" class="yuyueAction" method="yuyueGet">
+            <result name="success">/yuyueSet.jsp</result>
+        </action>
+        <action name="yuyueDetail" class="yuyueAction" method="yuyueDetail">
+            <result name="success">/yuyueDetail.jsp</result>
+        </action>
+        <action name="yuyueDetailQian" class="yuyueAction" method="yuyueDetailQian">
+            <result name="success">/yuyueDetailQian.jsp</result>
+        </action>
+        <action name="yuyueXinxi" class="yuyueAction" method="yuyueXinxi">
+            <result name="success">/yuyueXinxi.jsp</result>
+        </action>
+        <action name="yuyueSet" class="yuyueAction" method="yuyueSet">
+        </action>
+        <action name="yuyueSet2" class="yuyueAction" method="yuyueSet2">
+        </action>
+<!--2 yuyue searchbykey-->
+<!--struts.notuse.bodysearchbycolunmxmlList-->
+<!--3 yuyue getbycolumn-->
+        <action name="yuyueGetByid" class="yuyueAction" method="yuyueGetByid">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetByidQian" class="yuyueAction" method="yuyueGetByidQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetBybiaoti" class="yuyueAction" method="yuyueGetBybiaoti">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetBybiaotiQian" class="yuyueAction" method="yuyueGetBybiaotiQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetByxianluid" class="yuyueAction" method="yuyueGetByxianluid">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetByxianluidQian" class="yuyueAction" method="yuyueGetByxianluidQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetByusersid" class="yuyueAction" method="yuyueGetByusersid">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetByusersidQian" class="yuyueAction" method="yuyueGetByusersidQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetByriqi" class="yuyueAction" method="yuyueGetByriqi">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetByriqiQian" class="yuyueAction" method="yuyueGetByriqiQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetByxingming" class="yuyueAction" method="yuyueGetByxingming">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetByxingmingQian" class="yuyueAction" method="yuyueGetByxingmingQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetBydianhua" class="yuyueAction" method="yuyueGetBydianhua">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetBydianhuaQian" class="yuyueAction" method="yuyueGetBydianhuaQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="yuyueGetBybeizhu" class="yuyueAction" method="yuyueGetBybeizhu">
+            <result name="success">/yuyueMana.jsp</result>
+        </action>
+        <action name="yuyueGetBybeizhuQian" class="yuyueAction" method="yuyueGetBybeizhuQian">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+
+<!--6 database.tableMap.table.colunmMap.colunm.fatherTableNameLoweryuyue getbycolumn-->
+        <action name="xianluyuyueGetByxianluid" class="yuyueAction" method="yuyueGetByAll">
+<!--
+            <result name="success">/xianluyuyueChakan.jsp</result>
+-->
+            <result name="success">/yuyueChakan.jsp</result>
+
+        </action>
+        <action name="xianluyuyueGetByxianluidQian" class="yuyueAction" method="yuyueGetByAll">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="xianluyuyueAddQian" class="xianluAction" method="xianluGet">
+            <result name="success">/xianluyuyueAddQian.jsp</result>
+        </action>
+        <action name="xianluyuyueAdd" class="xianluAction" method="xianluGet">
+            <result name="success">/xianluyuyueAdd.jsp</result>
+        </action>
+        <action name="usersyuyueGetByusersid" class="yuyueAction" method="yuyueGetByAll">
+<!--
+            <result name="success">/usersyuyueChakan.jsp</result>
+-->
+            <result name="success">/yuyueChakan.jsp</result>
+
+        </action>
+        <action name="usersyuyueGetByusersidQian" class="yuyueAction" method="yuyueGetByAll">
+            <result name="success">/yuyueManaQian.jsp</result>
+        </action>
+        <action name="usersyuyueAddQian" class="usersAction" method="usersGet">
+            <result name="success">/usersyuyueAddQian.jsp</result>
+        </action>
+        <action name="usersyuyueAdd" class="usersAction" method="usersGet">
+            <result name="success">/usersyuyueAdd.jsp</result>
+        </action>
+
+<!--4 yuyue setbycolumn-->
+<!--struts.notuse.bodysetbycolunmxmlList-->
+
+
+    </package>
+</struts>

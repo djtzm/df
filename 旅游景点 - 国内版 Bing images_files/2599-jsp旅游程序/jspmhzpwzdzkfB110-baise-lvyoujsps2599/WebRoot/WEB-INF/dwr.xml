@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+    <allow>
+        <create creator="spring" javascript="loginService">
+            <param name="beanName" value="loginService"></param>
+        </create>
+        <!--4tableselect-->
+         <convert converter="bean" match="com.model.chanpin">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.dx">
+              <param name="include" value="id,leibie"></param>
+         </convert>
+         <convert converter="bean" match="com.model.gonggao">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.jingdian">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.jiudian">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.leibie">
+              <param name="include" value="id,mingcheng"></param>
+         </convert>
+         <convert converter="bean" match="com.model.lianjie">
+              <param name="include" value="id,name"></param>
+         </convert>
+         <convert converter="bean" match="com.model.liuyan">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.lunbo">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.meishi">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.pinglun">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.shoucang">
+              <param name="include" value="id,shijian"></param>
+         </convert>
+         <convert converter="bean" match="com.model.users">
+              <param name="include" value="id,loginname"></param>
+         </convert>
+         <convert converter="bean" match="com.model.xianlu">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.yuding">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+         <convert converter="bean" match="com.model.yuyue">
+              <param name="include" value="id,biaoti"></param>
+         </convert>
+
+    </allow>
+</dwr>

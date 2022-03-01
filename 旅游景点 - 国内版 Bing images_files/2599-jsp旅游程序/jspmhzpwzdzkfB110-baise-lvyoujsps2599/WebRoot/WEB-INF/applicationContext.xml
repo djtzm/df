@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName"
+                  value="com.mysql.jdbc.Driver">
+        </property>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/lvyoujsps2599?useUnicode=true&amp;amp;amp;amp;amp;amp;characterEncoding=utf-8">
+        </property>
+        <property name="username" value="root"></property><!--数据库的连接名称-->
+        <property name="password" value="root"></property><!--数据库的连接密码，需要改成你自己-->
+    </bean>
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.SQLServerDialect
+                </prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+        <property name="mappingResources">
+            <list>
+			    <value>com/model/chanpin.hbm.xml</value>
+			    <value>com/model/dx.hbm.xml</value>
+			    <value>com/model/gonggao.hbm.xml</value>
+			    <value>com/model/jingdian.hbm.xml</value>
+			    <value>com/model/jiudian.hbm.xml</value>
+			    <value>com/model/leibie.hbm.xml</value>
+			    <value>com/model/lianjie.hbm.xml</value>
+			    <value>com/model/liuyan.hbm.xml</value>
+			    <value>com/model/lunbo.hbm.xml</value>
+			    <value>com/model/meishi.hbm.xml</value>
+			    <value>com/model/pinglun.hbm.xml</value>
+			    <value>com/model/shoucang.hbm.xml</value>
+			    <value>com/model/users.hbm.xml</value>
+			    <value>com/model/xianlu.hbm.xml</value>
+			    <value>com/model/yuding.hbm.xml</value>
+			    <value>com/model/yuyue.hbm.xml</value>
+
+            </list>
+        </property>
+    </bean>
+
+    <!-- 3 bodyloginservicexmlList -->
+    <bean id="loginService" class="com.service.loginService">
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+    </bean>
+
+    <bean id="indexAction" class="com.action.indexAction" scope="prototype">
+<!--4bodyindexactionxmlList-->
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+    </bean>
+    <!--5 bodypropertyxmlList-->
+	<bean id="chanpinDAO" class="com.dao.chanpinDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="chanpinAction" class="com.action.chanpinAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="dxDAO" class="com.dao.dxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="dxAction" class="com.action.dxAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="gonggaoDAO" class="com.dao.gonggaoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="gonggaoAction" class="com.action.gonggaoAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="jingdianDAO" class="com.dao.jingdianDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="jingdianAction" class="com.action.jingdianAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="jiudianDAO" class="com.dao.jiudianDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="jiudianAction" class="com.action.jiudianAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="leibieDAO" class="com.dao.leibieDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="leibieAction" class="com.action.leibieAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="lianjieDAO" class="com.dao.lianjieDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="lianjieAction" class="com.action.lianjieAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="liuyanDAO" class="com.dao.liuyanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="liuyanAction" class="com.action.liuyanAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="lunboDAO" class="com.dao.lunboDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="lunboAction" class="com.action.lunboAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="meishiDAO" class="com.dao.meishiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="meishiAction" class="com.action.meishiAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="pinglunDAO" class="com.dao.pinglunDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="pinglunAction" class="com.action.pinglunAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="shoucangDAO" class="com.dao.shoucangDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="shoucangAction" class="com.action.shoucangAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="usersDAO" class="com.dao.usersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="usersAction" class="com.action.usersAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="xianluDAO" class="com.dao.xianluDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="xianluAction" class="com.action.xianluAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="yudingDAO" class="com.dao.yudingDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="yudingAction" class="com.action.yudingAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+	<bean id="yuyueDAO" class="com.dao.yuyueDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="yuyueAction" class="com.action.yuyueAction" scope="prototype">
+
+				<property name="chanpinDAO">
+					<ref bean="chanpinDAO" />
+				</property>
+				<property name="dxDAO">
+					<ref bean="dxDAO" />
+				</property>
+				<property name="gonggaoDAO">
+					<ref bean="gonggaoDAO" />
+				</property>
+				<property name="jingdianDAO">
+					<ref bean="jingdianDAO" />
+				</property>
+				<property name="jiudianDAO">
+					<ref bean="jiudianDAO" />
+				</property>
+				<property name="leibieDAO">
+					<ref bean="leibieDAO" />
+				</property>
+				<property name="lianjieDAO">
+					<ref bean="lianjieDAO" />
+				</property>
+				<property name="liuyanDAO">
+					<ref bean="liuyanDAO" />
+				</property>
+				<property name="lunboDAO">
+					<ref bean="lunboDAO" />
+				</property>
+				<property name="meishiDAO">
+					<ref bean="meishiDAO" />
+				</property>
+				<property name="pinglunDAO">
+					<ref bean="pinglunDAO" />
+				</property>
+				<property name="shoucangDAO">
+					<ref bean="shoucangDAO" />
+				</property>
+				<property name="usersDAO">
+					<ref bean="usersDAO" />
+				</property>
+				<property name="xianluDAO">
+					<ref bean="xianluDAO" />
+				</property>
+				<property name="yudingDAO">
+					<ref bean="yudingDAO" />
+				</property>
+				<property name="yuyueDAO">
+					<ref bean="yuyueDAO" />
+				</property>
+
+	</bean>
+
+
+</beans>

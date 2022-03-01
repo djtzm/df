@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jspmhzpwzdzkfB110-baise"
+  id="myeclipse.1575875889032"
+  context-root="/jspmhzpwzdzkfB110-baise"
+  j2ee-spec="5.0"
+  archive="jspmhzpwzdzkfB110-baise.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
